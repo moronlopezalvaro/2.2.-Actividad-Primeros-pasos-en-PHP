@@ -1,24 +1,26 @@
 <?php
 // 1. Directivas de configuración
- error_reporting = E_ALL
+ error_reporting(E_ALL);
  
 // Configuración de hora local para la fecha dinámica
- 
- 
+ $fechaHoy = date('d/m/Y');
+ $horaActual = date('H:i:s');
  
 // 2. Definición de variables globales (nombre, apellidos, edadActual)
- 
+ $nombre     = "Álvaro";
+ $apellidos  = "Morón López";
+ $edadActual = 18; // Cambia este valor según tu edad real
  
 // 3. Control de Ámbitos y Funciones PHP
 // Declaramos las variables fuera para inicializarlas en el ámbito global
 //edad10, edad20, edadDoble, todas a 0 de inicio.﻿
  
  
-function calcularEdadesFuturas() {
+// function calcularEdadesFuturas() {
     // Esto es necesario?: Acceso al ámbito global mediante la palabra reservada 'global'
     // Operadores aritméticos (edad10, edad20, edadDoble)
     // establecer los valores correctos
-}
+//}
  
 // Ejecutamos la función para procesar los cálculos en el servidor
  
@@ -37,6 +39,9 @@ function calcularEdadesFuturas() {
         #resultado { margin-top: 15px; font-size: 1.2em; font-weight: bold; color: #28a745; }
         footer { margin-top: 30px; font-size: 0.85em; color: #666; }
     </style>
+    <body>
+        <p>Fecha actual del servidor: <?php echo htmlspecialchars($fechaHoy); ?></p>
+    </body>
  
  
     <script>
