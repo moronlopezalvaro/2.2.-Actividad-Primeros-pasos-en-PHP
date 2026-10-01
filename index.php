@@ -1,6 +1,7 @@
 <?php
 // 1. Directivas de configuración
- error_reporting(E_ALL);
+ini_set('display_errors', '1');  
+error_reporting(E_ALL);
  
 // Configuración de hora local para la fecha dinámica
  $fechaHoy = date('d/m/Y');
@@ -45,10 +46,6 @@ function calcularEdadesFuturas() {
         #resultado { margin-top: 15px; font-size: 1.2em; font-weight: bold; color: #28a745; }
         footer { margin-top: 30px; font-size: 0.85em; color: #666; }
     </style>
-    <body>
-        <p>Fecha actual del servidor: <?php echo htmlspecialchars($fechaHoy); ?></p>
-    </body>
- 
  
     <script>
         function mostrarResultado(opcion) {
@@ -93,7 +90,7 @@ function calcularEdadesFuturas() {
  
  
     <footer>
-        Petición procesada dinámicamente por el servidor el de <?= date('d/m/Y a las H:i:s') ?>.
+        Petición procesada dinámicamente por el servidor el de <?= date('d/m/Y') ?> a las <?= date('H:i:s') // he tenido que modificar esta parte del codigo porque de la forma antigua daba asi: "(fecha)pmThursdaypm18(hora)"?>.
     </footer>
  
  
