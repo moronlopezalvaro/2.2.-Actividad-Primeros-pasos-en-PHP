@@ -1,6 +1,6 @@
 <?php
 // 1. Directivas de configuración
- 
+ error_reporting = E_ALL
  
 // Configuración de hora local para la fecha dinámica
  
@@ -22,7 +22,7 @@ function calcularEdadesFuturas() {
  
 // Ejecutamos la función para procesar los cálculos en el servidor
  
-?>/
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
